@@ -1,1 +1,45 @@
-<!-- page goes here -->
+<!DOCTYPE>
+<html>
+<head>
+	<title>DayLoad</title>
+	<script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+	<script src="liquidFillGauge.js" language="JavaScript"></script>
+	<script src='dayload.js'> </script>
+
+</head>
+
+<body>
+	<span id="label">Hey, it's a thing</span>
+	<svg id="gauge" width="97%" height="250"></svg>
+</body>
+
+<script>
+
+
+// use datetime to get current time
+// use geolocate to get current location
+// combine to get local time?
+
+
+
+var HOURS_IN_DAY = 24;
+var localTime = 3;
+var fillPercent = localTime / HOURS_IN_DAY * 100;
+// is around 50%
+console.log(fillPercent);
+
+// use d3 to display fill gauge of day's progress
+
+// gauge settings
+var gauge = loadLiquidFillGauge("gauge", fillPercent);
+// gets default config from liquidFillGauge.js
+var config = liquidFillGaugeDefaultSettings();
+config.circleColor = "#FF7777";
+config.textColor = "#FF4444";
+config.waveTextColor = "#FFAAAA";
+config.waveColor = "#FFDDDD";
+config.circleThickness = 0.2;
+config.textVertPosition = 0.2;
+config.waveAnimateTime = 1000;
+
+</script>
