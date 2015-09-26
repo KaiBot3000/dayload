@@ -1,22 +1,11 @@
-// Figure out the percentage to display
-var HOURS_IN_DAY = 24;
+// Calculate display percentage
 var MINUTES_IN_DAY = 1440;
 var MINUTES_IN_HOUR = 60;
 
 var date = new Date();
-
-var hours = date.getHours();
-var hoursAsMinutes = hours * MINUTES_IN_HOUR;
-
-var minutes = date.getMinutes();
-
-var timeInMinutes = hoursAsMinutes + minutes;
+var timeInMinutes = (date.getHours() * MINUTES_IN_HOUR) + date.getMinutes();
 
 var fillPercent = timeInMinutes / MINUTES_IN_DAY * 100;
-
-console.log(timeInMinutes);
-console.log(fillPercent);
-
 
 // use d3 to display fill gauge of day's progress
 

@@ -5,10 +5,14 @@
 	text-align: center;
 }
 
-#top {
+#gauge-top {
 	text-align: left;
 }
 
-#bottom {
+#gauge-bottom {
 	text-align: right;
+}
+
+#breakdown {
+	color:#24d1ff;
 }
